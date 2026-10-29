@@ -4,13 +4,13 @@
 using namespace std;
 
 int main() {
-    string names[5];
+    string names[5][20];
     int marks[5][3], total[5], top = 0;
     double avg[5];
     
     for (int i = 0; i < 5; i++) {
         cout << "Enter student name: ";
-        getline(cin >> ws, names[i]);
+        getline(cin >> ws, names[i][0]);
 
         total[i] = 0;
         for (int j = 0; j < 3; j++) {
@@ -40,7 +40,7 @@ int main() {
          << "Average\n";
 
     for (int i = 0; i < 5; i++) {
-        cout << left << setw(18) << names[i];
+        cout << left << setw(18) << names[i][0];
         for (int j = 0; j < 3; j++)
             cout << setw(7) << marks[i][j];
 
